@@ -46,8 +46,8 @@ St. Thomas' Hospital refined the performance of the network, thereby make it mor
 
 **Setting up DeepMedic:**
 
-Our framework was developed using DeepMedic; a project that offers easy access to deep learning for segmentation of structures of interest in 3D biomedical scans.
-DeepMedic needs to be installed for our neural networks to be used. Details on how to install and use DeepMedic can be found on 
+Our framework was developed using DeepMedic; an open-source project that offers easy access to deep learning for segmentation of structures of interest in 3D biomedical scans.
+DeepMedic needs to be installed for our deep neural networks to be used. Details on how to install and use DeepMedic can be found on 
 the project's GitHub (https://github.com/deepmedic/deepmedic); the networks were developed and refined using **v0.7.0**.
 
 **Using the brain detection network:** 
