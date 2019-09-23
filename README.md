@@ -59,7 +59,7 @@ For this step, you will need:
 You'll also need 
 - the test configuration file (bdn_test_config.cfg), which essentially defines how to run the network on the 3D scans of interest.
 - the list of 3D scans you need to segment (test_t2w.cfg), you will need to edit this list.
-- the list of output file names (bdn_out_names.cfg), each entry here should correspond to a line in the list of scans. You will need to edit this list. 
+- the list of output file names (bdn_out_names.cfg), each entry here should correspond to a line in the list of scans file. You will need to edit this list. 
 
 **(c) Using the tissue segmentation network:** 
 
@@ -71,7 +71,7 @@ Similar to the previous step, you will need:
 - the list of output file names (bdn_out_names.cfg). Again, each entry here should correspond to a line in the list of scans; you will need to edit this list. 
 
 You'll also need 
-- the ROI mask configuration file (roi.cfg). This is a list of brain masks within which tissue segmentation will be carried out. This should be the segmentation
+- the ROI mask configuration file (roi.cfg). This is a list of brain masks within which tissue segmentation will be carried out. This needs to be the final segmentation
 output from the previous step, which can found in the 'predictions' directory. 
 
 
