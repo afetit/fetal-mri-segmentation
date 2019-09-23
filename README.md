@@ -44,13 +44,13 @@ St. Thomas' Hospital refined the performance of the network, thereby make it mor
 ### Using the framework
 
 
-**(a) setting up DeepMedic:**
+**(a) Setting up DeepMedic:**
 
 Our framework was developed using DeepMedic; an open-source project that offers easy access to deep learning for segmentation of structures of interest in 3D biomedical scans.
 DeepMedic needs to be installed for our deep neural networks to be used. Details on how to install and use DeepMedic can be found on 
 the project's GitHub (https://github.com/deepmedic/deepmedic); the networks were developed and refined using **v0.7.0**.
 
-**(b) using the brain detection network:** 
+**(b) Using the brain detection network:** 
 
 For this step, you will need:
 - the model configuration file (bdn_model_config.cfg).
@@ -61,7 +61,7 @@ You'll also need
 - the list of 3D scans you need to segment (test_t2w.cfg), you will need to edit this list.
 - the list of output file names (bdn_out_names.cfg), each entry here should correspond to a line in the list of scans. You will need to edit this list. 
 
-**(c) using the tissue segmentation network:** 
+**(c) Using the tissue segmentation network:** 
 
 Similar to the previous step, you will need:
 - the model configuration file (tsn_model_config.cfg).
