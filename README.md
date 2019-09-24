@@ -82,8 +82,8 @@ output from the previous step, which can found in the 'predictions' directory.
 
 Running the TSN is also straightforward.
 ```
-./deepMedicRun -model ./examples/configFiles/bdn/model/tsn_model_config.cfg 
-               -test ./examples/configFiles/bdn/test/tsn_test_config.cfg 
+./deepMedicRun -model ./examples/configFiles/tsn/model/tsn_model_config.cfg 
+               -test ./examples/configFiles/tsn/test/tsn_test_config.cfg 
                -load  ./examples/output/saved_models/train_session_tsn/tsn.model.ckpt
                -dev cuda0
 ```
