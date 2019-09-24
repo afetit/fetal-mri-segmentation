@@ -7,14 +7,14 @@
 
 Here, we contribute an age-agnostic software framework based
 on deep neural networks for fast and sensitive tissue 
-segmentation of fetal brain MRI. 
+segmentation of T2w fetal brain MRI. 
 
 Our framework was developed, refined,
 and evaluated on 249 T2w fetal scans acquired at gestational ages 21 – 38 weeks. Data used to develop the framework was obtained from the **developing human connectome project** 
 (dHCP) cohort (http://www.developingconnectome.org/). 
 
 
-The framework takes volumetric MRI scans of fetal brains (NIFTI files) as input, 
+The framework takes volumetric MRI of fetal brains (NIfTI files) as input, 
 and returns tissue segmentation maps of the following classes as output:
 1. Brainstem.
 2. CSF.
