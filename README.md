@@ -81,10 +81,11 @@ You'll also need
 output from the previous step, which can found in the 'predictions' directory. Each entry in this list should have a corresponding T2-weighted file in the test_t2w.cfg file.
 
 Running the TSN is also straightforward.
+
 ```
-./deepMedicRun -model ./examples/configFiles/tsn/model/tsn_model_config.cfg 
-               -test ./examples/configFiles/tsn/test/tsn_test_config.cfg 
-               -load  ./examples/output/saved_models/train_session_tsn/tsn.model.ckpt
+./deepMedicRun -model ./fetal-segmentation-framework/tsn/architecture/tsn_model_config.cfg 
+               -test ./fetal-segmentation-framework/tsn/test/tsn_test_config.cfg 
+               -load  ./fetal-segmentation-framework/tsn/checkpoint/tsn.model.ckpt
                -dev cuda0
 ```
 
