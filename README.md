@@ -2,6 +2,7 @@
 
 ![](https://github.com/afetit/dhcp-fetal-segmentation-tool/blob/master/documentation/for-github.png)
 
+---
 ### **Introduction**
 
 
@@ -40,7 +41,7 @@ St. Thomas' Hospital refined the performance of the network, thereby make it mor
 
 
 
-
+---
 ### Using the framework
 
 
