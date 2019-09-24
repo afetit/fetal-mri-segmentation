@@ -76,7 +76,7 @@ Similar to the previous step, you will need:
 - The list of 3D scans you need to segment (test_t2w.cfg). Again, you will need to edit this list.
 - The list of output file names (bdn_out_names.cfg). Again, each entry here should correspond to a line in the list of scans; you will need to edit this list. 
 
-However, you'll also need 
+You'll also need 
 - The ROI mask configuration file (roi.cfg). This needs to be the final segmentation
 output from the previous step, which can found in the 'predictions' directory. 
 
