@@ -37,7 +37,7 @@ St. Thomas' Hospital refined the performance of the network, thereby make it mor
 
 
 ---
-### Using the framework
+### Running the framework manually
 
 
 **(a) Setting up DeepMedic:**
@@ -89,5 +89,5 @@ Running the TSN is also straightforward.
 ```
 
 ---
-
+### Running the framework from Docker
 
