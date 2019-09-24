@@ -74,7 +74,7 @@ Similar to the previous step, you will need:
 - The TSN network check-point files (tsn.model.ckpt.index and tsn.model.ckpt.data).
 - The test configuration file (tsn_test_config.cfg), 
 - The list of 3D scans you need to segment (test_t2w.cfg). Again, you will need to edit this list.
-- The list of output file names (bdn_out_names.cfg). Again, each entry here should correspond to a line in the list of scans; you will need to edit this list. 
+- The list of output file names (tsn_out_names.cfg). Again, each entry here should correspond to a line in the list of scans; you will need to edit this list. 
 
 You'll also need 
 - The ROI mask configuration file (roi.cfg). This needs to list down the paths to the final segmentation
