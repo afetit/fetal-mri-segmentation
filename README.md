@@ -52,15 +52,14 @@ the project's GitHub (https://github.com/deepmedic/deepmedic); the networks were
 
 **(b) Using the brain detection network:** 
 
-Once you have familiarised yourself with DeepMedic, how to use its command syntax, and how its configuration files are like, this step is where you run a pre-trained neural network on a list of T2w fetal scans you wish to segment. This step only generates brain masks; you will need those before you carry out the final segmentation. 
+Once you have familiarised yourself with DeepMedic, how to use its command syntax, and how its configuration files are like, this step is where you run a pre-trained neural network on a list of T2w fetal scans you wish to segment. This step only generates brain masks, but you will need those before you carry out tissue segmentation. 
 
-
-For this step, you will need:
-- The model configuration file (bdn_model_config.cfg).
-- The network check-point file (bdn.model.ckpt).
-- The test configuration file (bdn_test_config.cfg), which essentially defines how to run the network on the scans of interest.
-- The list of scans you need to segment (test_t2w.cfg), you will need to edit this list.
-- The list of output file names (bdn_out_names.cfg), each entry in this file should correspond to an entry in the list of scans file. You will need to edit this list. 
+In order to generate the brain masks you will need:
+- The model configuration file (bdn_model_config.cfg). This file specifies the architecture of the neural network.
+- The network check-point file (bdn.model.ckpt). This file holds the state of the neural network. 
+- The test configuration file (bdn_test_config.cfg). This file defines how to run the network on the scans of interest, e.g. where to find the list of scans that we're applying the network on.
+- The list of scans you need to segment (test_t2w.cfg). You will need to edit this list.
+- The list of output file names (bdn_out_names.cfg). Each entry in this file should correspond to an entry in the list of scans file. You will need to edit this list. 
 
 **(c) Using the tissue segmentation network:** 
 
