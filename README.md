@@ -53,14 +53,22 @@ the project's GitHub (https://github.com/deepmedic/deepmedic); the networks were
 
 **(b) Using the brain detection network:** 
 
-Once you have familiarised yourself with DeepMedic, how to use its command-line syntax, and how its configuration files are like, this step is where you apply a pre-trained neural network on the T2w fetal scans you wish to segment. This step only generates brain masks, but you will need those before you carry out tissue segmentation. 
+Once you have familiarised yourself with DeepMedic, how to use its command-line syntax, and how its configuration files are like, this step is where you apply a pre-trained neural network on the T2-weighted fetal scans you wish to segment. This step only generates brain masks, but you will need those before you carry out tissue segmentation. 
 
 In order to generate the brain masks you will need:
 - The model configuration file (bdn_model_config.cfg). This file specifies the architecture of the neural network.
-- The network check-point file (bdn.model.ckpt). This file holds the state of the neural network. 
+- The network check-point files (bdn.model.ckpt.index and bdn.model.ckpt.data). These hold the final state of the neural network after it has been trained. 
 - The test configuration file (bdn_test_config.cfg). This file defines how to run the network on the scans of interest, e.g. where to find the list of scans that we're applying the network on.
 - The list of scans you need to segment (test_t2w.cfg). You will need to edit this list.
 - A list that defines how you wish to name output files (bdn_out_names.cfg). Each entry in this file should correspond to an entry in the list of scans file. You will need to edit this list. 
+
+To use the files, you simply use standard DeepMedic commands as follows:
+```
+./deepMedicRun -model ./examples/configFiles/bdn/model/bdn_model_config.cfg 
+               -test ./examples/configFiles/bdn/test/bdn_test_config.cfg 
+               -load  ./examples/output/saved_models/train_session_bdn/bdn.model.ckpt
+               -dev cuda0
+```
 
 **(c) Using the tissue segmentation network:** 
 
@@ -68,7 +76,7 @@ Once you have generated brain masks for each of the scans you wish to segment, y
 
 Similar to the previous step, you will need:
 - The model configuration file (tsn_model_config.cfg).
-- The network check-point file (tsn.model.ckpt).
+- The network check-point files (tsn.model.ckpt.index and tsn.model.ckpt.data).
 - The test configuration file (tsn_test_config.cfg), 
 - The list of 3D scans you need to segment (test_t2w.cfg). Again, you will need to edit this list.
 - The list of output file names (bdn_out_names.cfg). Again, each entry here should correspond to a line in the list of scans; you will need to edit this list. 
