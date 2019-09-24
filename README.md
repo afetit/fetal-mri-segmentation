@@ -27,7 +27,7 @@ and returns tissue segmentation maps of the following classes as output:
 There are two core components to 
 our framework:
 
-A **brain detection network (BDN)** that detects regions of the MRI scan that do not correspond to zero-pixel background or outlier 
+A **brain detection network (BDN)** that detects regions of the fetal MRI scan that do not correspond to zero-pixel background or outlier 
 tissue class. Output of the BDN is then used as a region-of-interest (ROI) mask for the subsequent segmentation network.
 
 A **tissue segmentation network (TSN)** that segments regions in the MRI scan into one of the aforementioned brain tissue classes.
@@ -43,7 +43,7 @@ St. Thomas' Hospital refined the performance of the network, thereby make it mor
 **(a) Setting up DeepMedic:**
 
 Our framework was developed using DeepMedic; an open-source project that offers easy access to deep learning for segmentation of structures of interest in 3D biomedical scans.
-DeepMedic needs to be installed for our deep neural networks to be used. Details on how to install and use DeepMedic can be found on 
+DeepMedic needs to be installed on your stsem for our deep neural networks to be used. Details on how to install and use DeepMedic can be found on 
 the project's GitHub (https://github.com/deepmedic/deepmedic); the networks were developed and refined using **v0.7.0** of the project. Before moving on to the steps detailed below, we suggest that you familiarise yourself with DeepMedic and the tinyCNN example on the project's GitHub. The project has excellent, clear documentation. 
 
 **(b) Using the brain detection network (BDN):** 
