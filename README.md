@@ -53,7 +53,7 @@ the project's GitHub (https://github.com/deepmedic/deepmedic); the networks were
 
 **(b) Using the brain detection network:** 
 
-Once you have familiarised yourself with DeepMedic, how to use its command-line syntax, and how its configuration files are like, this step is where you run a pre-trained neural network on a list of T2w fetal scans you wish to segment. This step only generates brain masks, but you will need those before you carry out tissue segmentation. 
+Once you have familiarised yourself with DeepMedic, how to use its command-line syntax, and how its configuration files are like, this step is where you apply a pre-trained neural network on the T2w fetal scans you wish to segment. This step only generates brain masks, but you will need those before you carry out tissue segmentation. 
 
 In order to generate the brain masks you will need:
 - The model configuration file (bdn_model_config.cfg). This file specifies the architecture of the neural network.
