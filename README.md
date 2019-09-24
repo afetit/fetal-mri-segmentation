@@ -59,7 +59,7 @@ In order to generate the brain masks you will need:
 - The network check-point file (bdn.model.ckpt). This file holds the state of the neural network. 
 - The test configuration file (bdn_test_config.cfg). This file defines how to run the network on the scans of interest, e.g. where to find the list of scans that we're applying the network on.
 - The list of scans you need to segment (test_t2w.cfg). You will need to edit this list.
-- The list of output file names (bdn_out_names.cfg). Each entry in this file should correspond to an entry in the list of scans file. You will need to edit this list. 
+- A list that defines how you wish to name output files (bdn_out_names.cfg). Each entry in this file should correspond to an entry in the list of scans file. You will need to edit this list. 
 
 **(c) Using the tissue segmentation network:** 
 
