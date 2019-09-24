@@ -54,7 +54,7 @@ In order to generate the brain masks you will need:
 - The BDN model configuration file (bdn_model_config.cfg). This file specifies the architecture of the neural network.
 - The BDN network check-point files (bdn.model.ckpt.index and bdn.model.ckpt.data). These hold the final state of the neural network after it has been trained and validated. 
 - The test configuration file (bdn_test_config.cfg). This file defines how to run the network on the scans of interest, e.g. where to find the list of scans that we're applying the network on.
-- The list of scans you need to segment (test_t2w.cfg). You will need to edit this list.
+- The list of scans you wish to segment (test_t2w.cfg). You will need to edit this list so that each entry points to the path of an individual scan.
 - A list that defines how you wish to name output files (bdn_out_names.cfg). Each entry in this file should correspond to an entry in the list of scans file. You will need to edit this list. 
 
 To run the BDN, simply use standard DeepMedic commands as follows. GPU acceleration is recommended and can be specified using the -dev key. 
