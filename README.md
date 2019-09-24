@@ -1,6 +1,6 @@
 # The dHCP fetal segmentation framework
 
-![](https://github.com/afetit/dhcp-fetal-segmentation-tool/blob/master/documentation/for-github.png)
+![](https://github.com/afetit/dhcp-fetal-segmentation-tool/blob/master/documentation/for-github.png )
 
 ---
 ### **Introduction**
