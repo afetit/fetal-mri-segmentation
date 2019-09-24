@@ -40,7 +40,7 @@ St. Thomas' Hospital refined the performance of the network, thereby make it mor
 ### Running the framework manually
 
 
-**(a) Setting up DeepMedic:**
+**(a) Set up DeepMedic:**
 
 Our framework was developed using DeepMedic; an open-source project that offers easy access to deep learning for segmentation of structures of interest in 3D biomedical scans.
 DeepMedic needs to be installed on your stsem for our networks to be used. Details on how to install and use DeepMedic can be found on 
@@ -50,7 +50,7 @@ the project's GitHub (https://github.com/deepmedic/deepmedic); the networks were
 
 In essence, our framework is a collection of network checkpoints and configuration files that were developed and refined on dHCP fetal scans using DeepMedic. Once you have familiarised yourself with DeepMedic, how to use its command-line syntax, and how its configuration files work, download the directory named *fetal-segmentation-framework*; this contains all necessary files to run our framework, in addition to example dHCP data to demonstrate the neural networks' utility. Place *fetal-segmentation-framework* under the *DeepMedic* directory.
 
-**(c) Running the brain detection network (BDN):** 
+**(c) Run the brain detection network (BDN):** 
 
 This step is where you apply the pre-trained BDN model on the T2-weighted fetal scans you wish to segment. This step only generates brain masks, but you will need those before you carry out tissue segmentation. 
 
@@ -69,7 +69,7 @@ To run the BDN, simply use standard DeepMedic commands as follows. GPU accelerat
                -dev cuda0
 ```
 
-**(d) Running the tissue segmentation network (TSN):** 
+**(d) Run the tissue segmentation network (TSN):** 
 
 Once you have generated brain masks for each of the scans you wish to segment, you can now apply the pre-trained TSN model on the scans, while indicating that the generated brain masks need to be used for defining regions-of-interest.  
 
