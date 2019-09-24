@@ -80,6 +80,14 @@ You'll also need
 - The ROI mask configuration file (roi.cfg). This needs to be the final segmentation
 output from the previous step, which can found in the 'predictions' directory. 
 
+Running the TSN is also straightforward.
+```
+./deepMedicRun -model ./examples/configFiles/bdn/model/tsn_model_config.cfg 
+               -test ./examples/configFiles/bdn/test/tsn_test_config.cfg 
+               -load  ./examples/output/saved_models/train_session_tsn/tsn.model.ckpt
+               -dev cuda0
+```
+
 ---
 
 
