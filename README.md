@@ -8,10 +8,10 @@
 
 Here, we contribute an age-agnostic software framework based
 on deep neural networks for fast and sensitive tissue 
-segmentation of T2w MRI scans of fetal brain. 
+segmentation of T2-weighted MRI scans of fetal brain. 
 
 Our framework was developed, refined,
-and evaluated on 249 T2w fetal scans acquired at gestational ages 21 – 38 weeks. Data used to develop the framework was obtained from the **developing human connectome project** 
+and evaluated on 249 fetal scans acquired at gestational ages 21 – 38 weeks. Data used to develop the framework was obtained from the **developing human connectome project** 
 (dHCP) (http://www.developingconnectome.org/), which aims to make major scientific progress by creating the first 4-dimensional connectome of the developing brain.
 
 
