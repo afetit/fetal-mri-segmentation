@@ -59,9 +59,9 @@ In order to generate the brain masks you will need:
 
 To run the BDN, simply use standard DeepMedic commands as follows. GPU acceleration is recommended and can be specified using the -dev key. 
 ```
-./deepMedicRun -model ./examples/configFiles/bdn/model/bdn_model_config.cfg 
-               -test ./examples/configFiles/bdn/test/bdn_test_config.cfg 
-               -load  ./examples/output/saved_models/train_session_bdn/bdn.model.ckpt
+./deepMedicRun -model ./fetal-segmentation-framework/bdn/architecture/bdn_model_config.cfg 
+               -test ./fetal-segmentation-framework/bdn/test/bdn_test_config.cfg 
+               -load  ./fetal-segmentation-framework/bdn/checkpoint/bdn.model.ckpt
                -dev cuda0
 ```
 
