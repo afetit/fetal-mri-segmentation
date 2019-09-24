@@ -48,15 +48,13 @@ St. Thomas' Hospital refined the performance of the network, thereby make it mor
 
 Our framework was developed using DeepMedic; an open-source project that offers easy access to deep learning for segmentation of structures of interest in 3D biomedical scans.
 DeepMedic needs to be installed for our deep neural networks to be used. Details on how to install and use DeepMedic can be found on 
-the project's GitHub (https://github.com/deepmedic/deepmedic); the networks were developed and refined using **v0.7.0**.
+the project's GitHub (https://github.com/deepmedic/deepmedic); the networks were developed and refined using **v0.7.0** of the project. Before moving on to the steps detailed below, we suggest you familiarise yourself with DeepMedic and the tinyCNN example on the project's website. The project has excellent documentation. 
 
 **(b) Using the brain detection network:** 
 
 For this step, you will need:
 - the model configuration file (bdn_model_config.cfg).
 - the network check-point file (bdn.model.ckpt).
-
-You'll also need 
 - the test configuration file (bdn_test_config.cfg), which essentially defines how to run the network on the 3D scans of interest.
 - the list of 3D scans you need to segment (test_t2w.cfg), you will need to edit this list.
 - the list of output file names (bdn_out_names.cfg), each entry here should correspond to a line in the list of scans file. You will need to edit this list. 
