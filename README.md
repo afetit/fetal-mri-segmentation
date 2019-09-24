@@ -46,9 +46,13 @@ Our framework was developed using DeepMedic; an open-source project that offers 
 DeepMedic needs to be installed on your stsem for our networks to be used. Details on how to install and use DeepMedic can be found on 
 the project's GitHub (https://github.com/deepmedic/deepmedic); the networks were developed and refined using **v0.7.0** of the project. Before moving on to the steps detailed below, we suggest that you familiarise yourself with DeepMedic and the tinyCNN example on the project's GitHub. The project has excellent, clear documentation. 
 
-**(b) Running the brain detection network (BDN):** 
+**(b) Download the segmentation framework files:**
 
-Once you have familiarised yourself with DeepMedic, how to use its command-line syntax, and how its configuration files work, this step is where you apply the pre-trained BDN model on the T2-weighted fetal scans you wish to segment. This step only generates brain masks, but you will need those before you carry out tissue segmentation. 
+In essence, our framework is a collection of network checkpoints and configuration files that were developed and refined on dHCP fetal scans using DeepMedic. Once you have familiarised yourself with DeepMedic, how to use its command-line syntax, and how its configuration files work, download the directory named *fetal-segmentation-framework*; this contains all necessary files to run our framework, in addition to example dHCP data to demonstrate the neural networks' utility. Place *fetal-segmentation-framework* under the *DeepMedic* directory.
+
+**(c) Running the brain detection network (BDN):** 
+
+This step is where you apply the pre-trained BDN model on the T2-weighted fetal scans you wish to segment. This step only generates brain masks, but you will need those before you carry out tissue segmentation. 
 
 In order to generate the brain masks you will need:
 - The BDN model configuration file (bdn_model_config.cfg). This file specifies the architecture of the neural network.
@@ -65,7 +69,7 @@ To run the BDN, simply use standard DeepMedic commands as follows. GPU accelerat
                -dev cuda0
 ```
 
-**(c) Running the tissue segmentation network (TSN):** 
+**(d) Running the tissue segmentation network (TSN):** 
 
 Once you have generated brain masks for each of the scans you wish to segment, you can now apply the pre-trained TSN model on the scans, while indicating that the generated brain masks need to be used for defining regions-of-interest.  
 
