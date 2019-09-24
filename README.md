@@ -48,7 +48,7 @@ the project's GitHub (https://github.com/deepmedic/deepmedic); the networks were
 
 **(b) Using the brain detection network (BDN):** 
 
-Once you have familiarised yourself with DeepMedic, how to use its command-line syntax, and how its configuration files are like, this step is where you apply the pre-trained BDN model on the T2-weighted fetal scans you wish to segment. This step only generates brain masks, but you will need those before you carry out tissue segmentation. 
+Once you have familiarised yourself with DeepMedic, how to use its command-line syntax, and how its configuration files work, this step is where you apply the pre-trained BDN model on the T2-weighted fetal scans you wish to segment. This step only generates brain masks, but you will need those before you carry out tissue segmentation. 
 
 In order to generate the brain masks you will need:
 - The BDN model configuration file (bdn_model_config.cfg). This file specifies the architecture of the neural network.
@@ -57,7 +57,7 @@ In order to generate the brain masks you will need:
 - The list of scans you need to segment (test_t2w.cfg). You will need to edit this list.
 - A list that defines how you wish to name output files (bdn_out_names.cfg). Each entry in this file should correspond to an entry in the list of scans file. You will need to edit this list. 
 
-To use the files, simply use standard DeepMedic commands as follows:
+To run the BDN, simply use standard DeepMedic commands as follows. GPU acceleration is recommended and can be specified using the -dev key. 
 ```
 ./deepMedicRun -model ./examples/configFiles/bdn/model/bdn_model_config.cfg 
                -test ./examples/configFiles/bdn/test/bdn_test_config.cfg 
