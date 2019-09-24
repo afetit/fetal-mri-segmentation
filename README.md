@@ -77,8 +77,8 @@ Similar to the previous step, you will need:
 - The list of output file names (bdn_out_names.cfg). Again, each entry here should correspond to a line in the list of scans; you will need to edit this list. 
 
 You'll also need 
-- The ROI mask configuration file (roi.cfg). This needs to list down the final segmentation
-output from the previous step, which can found in the 'predictions' directory. 
+- The ROI mask configuration file (roi.cfg). This needs to list down the paths to the final segmentation
+output from the previous step, which can found in the 'predictions' directory. Each entry in this list should have a corresponding T2-weighted file in the test_t2w.cfg file.
 
 Running the TSN is also straightforward.
 ```
