@@ -67,7 +67,7 @@ To use the files, simply use standard DeepMedic commands as follows:
 
 **(c) Using the tissue segmentation network (TSN):** 
 
-Once you have generated brain masks for each of the scans you wish to segment, you can now apply the pre-trained TSN model on your files, while indicating that the generated brain masks need to be used for defining regions-of-interest.  
+Once you have generated brain masks for each of the scans you wish to segment, you can now apply the pre-trained TSN model on the scans, while indicating that the generated brain masks need to be used for defining regions-of-interest.  
 
 Similar to the previous step, you will need:
 - The TSN model configuration file (tsn_model_config.cfg).
