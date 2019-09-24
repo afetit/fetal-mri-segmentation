@@ -32,11 +32,11 @@ and returns tissue segmentation maps of the following classes as output:
 There are two core components to 
 our framework:
 
-**a brain detection network (BDN):** detects regions of the MRI scan that do not correspond to zero-pixel background or outlier 
-tissue class. Output of the brain detection network is then used as a region-of-interest (ROI) mask for the subsequent segmentation network.
+A **brain detection network (BDN)** that detects regions of the MRI scan that do not correspond to zero-pixel background or outlier 
+tissue class. Output of the BDN is then used as a region-of-interest (ROI) mask for the subsequent segmentation network.
 
-**a tissue segmentation network (TSN):** segments regions in the MRI scan into one of the aforementioned brain tissue classes.
-The network was developed via a human-in-the-loop approach, where an expert fetal image research annotator at 
+A **tissue segmentation network (TSN)** that segments regions in the MRI scan into one of the aforementioned brain tissue classes.
+The TSN was developed via a human-in-the-loop approach, where an expert fetal image research annotator at 
 St. Thomas' Hospital refined the performance of the network, thereby make it more sensitive and robust to different tissue classes. 
 
 
