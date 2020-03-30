@@ -1,22 +1,22 @@
-# The DHCP fetal segmentation framework
+# The DHCP fetal segmentation system
 
 ![](https://github.com/afetit/dhcp-fetal-segmentation-tool/blob/master/documentation/for-github-2.png)
 
 ---
 ### **Introduction**
 
-Here, we contribute an age invariant framework based on deep neural networks for fast and sensitive tissue 
-segmentation of T2-weighted fetal brain MRI. Our framework was developed, refined, and evaluated on 249 fetal scans acquired at gestational ages 21 – 38 weeks. Data used to develop the framework was obtained from the **Developing Human Connectome Project (DHCP)** (http://www.developingconnectome.org/), which aims to make major scientific progress by creating the first 4-dimensional connectome of the developing brain.
+Here, we contribute an automated system based on deep neural networks for fast and sensitive tissue 
+segmentation of fetal brain MRI. Our framework was developed, refined, and evaluated on 249 fetal scans acquired at gestational ages 21 – 38 weeks. Data used to develop the framework was obtained from the **Developing Human Connectome Project (DHCP)** (http://www.developingconnectome.org/), which aims to make major scientific progress by creating the first 4-dimensional connectome of the developing brain.
 
 
-Currently, the framework takes volumetric MRI of fetal brains (NIfTI files) as input, 
-and returns tissue segmentation maps for cortical grey matter. There are two core components to 
+Currently, the framework takes volumetric T2-weighted MRI (NIfTI files) as input, 
+and returns back tissue segmentation maps for cortical grey matter. There are two core components to 
 our framework:
 
 A **brain detection network (BDN)** that detects regions of the scan that do not correspond to zero-pixel background or outlier 
 tissue class. Output of the BDN can then be used as a region-of-interest (ROI) mask for the subsequent segmentation network.
 
-A **tissue segmentation network (TSN)** that carries out image segmentation of cortical grey matter. The TSN was developed via a human-in-the-loop approach, where an expert fetal neuroimage annotator at St Thomas' Hospital helped refine the performance of a network originally trained on automatically generated labels. This allowed us to accelerate the deep learning process for the complex task of fetal neuroimage segmentation with minimal manual labels (fewer than MRI 300 slices). 
+A **tissue segmentation network (TSN)** that carries out automated image segmentation of cortical grey matter. The TSN was developed via a human-in-the-loop approach, where an expert fetal neuroimage annotator at St Thomas' Hospital helped refine the performance of a network originally trained on automatically generated labels. This allowed us to accelerate the deep learning process for the complex task of fetal neuroimage segmentation with minimal manual labels (fewer than MRI 300 slices). 
 
 ---
 ### Running the framework manually
@@ -26,7 +26,7 @@ A **tissue segmentation network (TSN)** that carries out image segmentation of c
 
 Our framework was developed using DeepMedic; an open-source project that offers easy access to deep learning for segmentation of structures of interest in 3D biomedical scans.
 DeepMedic needs to be installed on your stsem for our networks to be used. Details on how to install and use DeepMedic can be found on 
-the project's GitHub (https://github.com/deepmedic/deepmedic); the networks were developed and refined using **v0.7.0** of the project. Before moving on to the steps detailed below, we suggest that you familiarise yourself with DeepMedic and the tinyCNN example on the project's GitHub. The project has excellent, clear documentation. 
+the project's GitHub (https://github.com/deepmedic/deepmedic), note that the networks were developed and refined using **v0.7.0** of the project. Before moving on to the steps detailed below, we suggest that you familiarise yourself with DeepMedic and the tinyCNN example on the project's GitHub. The project has excellent, clear documentation. 
 
 **(b) Download the segmentation framework files:**
 
