@@ -6,12 +6,12 @@
 ### **Introduction**
 
 Here, we contribute an automated system based on deep neural networks for fast and sensitive tissue 
-segmentation of fetal brain MRI. Our framework was developed, refined, and evaluated on 249 fetal scans acquired at gestational ages 21 – 38 weeks. Data used to develop the framework was obtained from the **Developing Human Connectome Project (DHCP)** (http://www.developingconnectome.org/), which aims to make major scientific progress by creating the first 4-dimensional connectome of the developing brain.
+segmentation of fetal brain MRI. Our system was developed, refined, and evaluated on 249 fetal scans acquired at gestational ages 21 – 38 weeks. Data used to develop the system was obtained from the **Developing Human Connectome Project (DHCP)** (http://www.developingconnectome.org/), which aims to make major scientific progress by creating the first 4-dimensional connectome of the developing brain.
 
 
-Currently, the framework takes volumetric T2-weighted MRI (NIfTI files) as input, 
+Currently, the system takes volumetric T2-weighted MRI (NIfTI files) as input, 
 and returns back tissue segmentation maps for cortical grey matter. There are two core components to 
-our framework:
+our system:
 
 A **brain detection network (BDN)** that detects regions of the scan that do not correspond to zero-pixel background or outlier 
 tissue class. Output of the BDN can then be used as a region-of-interest (ROI) mask for the subsequent segmentation network.
@@ -19,18 +19,18 @@ tissue class. Output of the BDN can then be used as a region-of-interest (ROI) m
 A **tissue segmentation network (TSN)** that carries out automated image segmentation of cortical grey matter. The TSN was developed via a human-in-the-loop approach, where an expert fetal neuroimage annotator at St Thomas' Hospital helped refine the performance of a network originally trained on automatically generated labels. This allowed us to accelerate the deep learning process for the complex task of fetal neuroimage segmentation with minimal manual labels (fewer than MRI 300 slices). 
 
 ---
-### Running the framework manually
+### Running the system manually
 
 
 **(a) Set up DeepMedic:**
 
-Our framework was developed using DeepMedic; an open-source project that offers easy access to deep learning for segmentation of structures of interest in 3D biomedical scans.
-DeepMedic needs to be installed on your stsem for our networks to be used. Details on how to install and use DeepMedic can be found on 
+Our system was developed using DeepMedic; an open-source project that offers easy access to deep learning for segmentation of structures of interest in 3D biomedical scans.
+DeepMedic needs to be installed on for our networks to be used. Details on how to install and use DeepMedic can be found on 
 the project's GitHub (https://github.com/deepmedic/deepmedic), note that the networks were developed and refined using **v0.7.0** of the project. Before moving on to the steps detailed below, we suggest that you familiarise yourself with DeepMedic and the tinyCNN example on the project's GitHub. The project has excellent, clear documentation. 
 
-**(b) Download the segmentation framework files:**
+**(b) Download the segmentation files:**
 
-In essence, our framework is a collection of network checkpoints and configuration files that were developed and refined on dHCP fetal scans using DeepMedic. Once you have familiarised yourself with DeepMedic, how to use its command-line syntax, and how its configuration files work, download the directory named *fetal-segmentation-framework*; this contains all necessary files to run our framework, in addition to example dHCP data to demonstrate the neural networks' utility. Place *fetal-segmentation-framework* under the *DeepMedic* directory.
+In essence, our system is a collection of network checkpoints and configuration files that were developed and refined on dHCP fetal scans using DeepMedic. Once you have familiarised yourself with DeepMedic, how to use its command-line syntax, and how its configuration files work, download the directory named *fetal-segmentation-system*; this contains all necessary files to run our system, in addition to example dHCP data to demonstrate the neural networks' utility. Place *fetal-segmentation-system* under the *DeepMedic* directory.
 
 **(c) Run the brain detection network (BDN):** 
 
