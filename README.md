@@ -18,10 +18,10 @@ tissues. Output of the BDN can then be used as a region-of-interest (ROI) mask f
 
 A **tissue segmentation network (TSN)** that carries out automated image segmentation of cortical grey matter. The TSN was developed via a human-in-the-loop approach, where an expert fetal neuroimage annotator at St Thomas' Hospital helped refine the performance of a network originally trained on automatically generated labels. This allowed us to accelerate the deep learning process for the complex task of fetal neuroimage segmentation with minimal manual labels (fewer than 300 MRI slices). 
 
-Example segmentation performance on an unseen scan:
+Example segmentation performance on an unseen scans:
 
-![](https://github.com/afetit/dhcp-fetal-segmentation-tool/blob/master/documentation/demo.gif)
-![](https://github.com/afetit/dhcp-fetal-segmentation-tool/blob/master/documentation/demo2.gif)
+<img src="https://github.com/afetit/dhcp-fetal-segmentation-tool/blob/master/documentation/demo.gif" width="250">
+<img src="https://github.com/afetit/dhcp-fetal-segmentation-tool/blob/master/documentation/demo2.gif" width="250">
 
 (Visualisation was done in MITK)
 
