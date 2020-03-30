@@ -23,8 +23,6 @@ Example segmentation of unseen scans:
 <img src="https://github.com/afetit/dhcp-fetal-segmentation-tool/blob/master/documentation/demo.gif" width="250">
 <img src="https://github.com/afetit/dhcp-fetal-segmentation-tool/blob/master/documentation/demo2.gif" width="250">
 
-(Visualisation was done in MITK)
-
 ---
 ### Running the system manually
 
