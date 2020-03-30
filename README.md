@@ -1,41 +1,22 @@
-# The dHCP fetal segmentation framework
+# The DHCP fetal segmentation framework
 
-![](https://github.com/afetit/dhcp-fetal-segmentation-tool/blob/master/documentation/for-github-1.png height="24" width="48")
-![](https://github.com/afetit/dhcp-fetal-segmentation-tool/blob/master/documentation/for-github-2.png height="24" width="48")
+![](https://github.com/afetit/dhcp-fetal-segmentation-tool/blob/master/documentation/for-github-2.png)
 
 ---
 ### **Introduction**
 
-
-Here, we contribute an age-agnostic software framework based on deep neural networks for fast and sensitive tissue 
-segmentation of T2-weighted fetal brain MRI. Our framework was developed, refined, and evaluated on 249 fetal scans acquired at gestational ages 21 – 38 weeks. Data used to develop the framework was obtained from the **developing human connectome project (dHCP)** (http://www.developingconnectome.org/), which aims to make major scientific progress by creating the first 4-dimensional connectome of the developing brain.
-
-
-The framework takes volumetric MRI of fetal brains (NIfTI files) as input, 
-and returns tissue segmentation maps of the following classes as output:
-1. Brainstem.
-2. CSF.
-3. Deep grey matter.
-4. Germinal matrix.
-5. Cortical grey matter.
-6. Outlier tissues.
-7. Ventricles.
-8. White matter.
-
-.. as well as zero-pixel background regions.
+Here, we contribute an age invariant framework based on deep neural networks for fast and sensitive tissue 
+segmentation of T2-weighted fetal brain MRI. Our framework was developed, refined, and evaluated on 249 fetal scans acquired at gestational ages 21 – 38 weeks. Data used to develop the framework was obtained from the **Developing Human Connectome Project (DHCP)** (http://www.developingconnectome.org/), which aims to make major scientific progress by creating the first 4-dimensional connectome of the developing brain.
 
 
-There are two core components to 
+Currently, the framework takes volumetric MRI of fetal brains (NIfTI files) as input, 
+and returns tissue segmentation maps for cortical grey matter. There are two core components to 
 our framework:
 
-A **brain detection network (BDN)** that detects regions of the fetal MRI scan that do not correspond to zero-pixel background or outlier 
-tissue class. Output of the BDN is then used as a region-of-interest (ROI) mask for the subsequent segmentation network.
+A **brain detection network (BDN)** that detects regions of the scan that do not correspond to zero-pixel background or outlier 
+tissue class. Output of the BDN can then be used as a region-of-interest (ROI) mask for the subsequent segmentation network.
 
-A **tissue segmentation network (TSN)** that segments regions in the MRI scan into one of the aforementioned brain tissue classes.
-The TSN was developed via a human-in-the-loop approach, where an expert fetal image research annotator at 
-St. Thomas' Hospital refined the performance of the network, thereby make it more sensitive and robust to different tissue classes. 
-
-
+A **tissue segmentation network (TSN)** that carries out image segmentation of cortical grey matter. The TSN was developed via a human-in-the-loop approach, where an expert fetal neuroimage annotator at St Thomas' Hospital helped refine the performance of a network originally trained on automatically generated labels. This allowed us to accelerate the deep learning process for the complex task of fetal neuroimage segmentation with minimal manual labels (fewer than MRI 300 slices). 
 
 ---
 ### Running the framework manually
