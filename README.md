@@ -25,7 +25,7 @@ A **tissue segmentation network (TSN)** that carries out automated image segment
 **(a) Set up DeepMedic:**
 
 Our system was developed using DeepMedic; an open-source project that offers easy access to deep learning for segmentation of structures of interest in 3D biomedical scans.
-DeepMedic needs to be installed on for our networks to be used. Details on how to install and use DeepMedic can be found on 
+DeepMedic needs to be installed for our networks to be used. Details on how to install and use DeepMedic can be found on 
 the project's GitHub (https://github.com/deepmedic/deepmedic), note that the networks were developed and refined using **v0.7.0** of the project. Before moving on to the steps detailed below, we suggest that you familiarise yourself with DeepMedic and the tinyCNN example on the project's GitHub. The project has excellent, clear documentation. 
 
 **(b) Download the segmentation files:**
