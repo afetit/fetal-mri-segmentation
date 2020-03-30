@@ -21,6 +21,7 @@ A **tissue segmentation network (TSN)** that carries out automated image segment
 Example segmentation performance on an unseen scan:
 
 ![](https://github.com/afetit/dhcp-fetal-segmentation-tool/blob/master/documentation/demo.gif)
+![](https://github.com/afetit/dhcp-fetal-segmentation-tool/blob/master/documentation/demo2.gif)
 
 (Visualisation was done in MITK)
 
