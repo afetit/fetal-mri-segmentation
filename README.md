@@ -31,13 +31,17 @@ the project's GitHub (https://github.com/deepmedic/deepmedic), note that the net
 
 In essence, our system is a collection of network checkpoints and configuration files that were developed and refined on DHCP fetal scans using DeepMedic. Once you have familiarised yourself with DeepMedic, how to use its command-line syntax, and how its configuration files work, download the directory named *fetal-segmentation-system*; this contains all necessary files to run our system, in addition to example DHCP data to demonstrate the neural networks' utility. Place *fetal-segmentation-system* under the *DeepMedic* directory.
 
-**(c) Run the brain detection network (BDN):** 
+**(c) Preprocessing 1 - normalise the scans' intensities:** 
 
-This step is where you apply the pre-trained BDN model on the T2-weighted fetal scans you wish to segment. This step only generates brain masks, but you will need those before you carry out tissue segmentation. 
+Our model was developed after normalising the intensities of the fetal scans to a zero-mean and unit variance space. Carrying out this step is important for the subsequent steps to work as expected.
+
+**(d) Preprocessing 2 - run the brain detection network (BDN):** 
+
+This is a preprocessing step where you apply a pre-trained model on the T2-weighted fetal scans you wish to segment. This step only generates brain masks, which you can use as ROIs when carrying out tissue segmentation. 
 
 In order to generate the brain masks you will need:
 - The BDN model configuration file (bdn_model_config.cfg). This file specifies the architecture of the neural network.
-- The BDN network check-point files (bdn.model.ckpt.index and bdn.model.ckpt.data). These hold the final state of the neural network after it has been trained and validated. 
+- The network check-point files (bdn.model.ckpt.index and bdn.model.ckpt.data). These hold the final state of the neural network after it has been trained and validated. 
 - The test configuration file (bdn_test_config.cfg). This file defines how to run the network on the scans of interest, e.g. where to find the list of scans that we're applying the network on.
 - The list of scans you wish to segment (test_t2w.cfg). You will need to edit this list so that each entry points to the path of an individual scan.
 - A list that defines how you wish to name output files (bdn_out_names.cfg). Each entry in this file should correspond to an entry in the list of scans file. You will need to edit this list. 
@@ -50,27 +54,27 @@ To run the BDN, simply use standard DeepMedic commands as follows. GPU accelerat
                -dev cuda0
 ```
 
-**(d) Run the tissue segmentation network (TSN):** 
+**(e) Run the cortical grey-matter segmentation network:** 
 
-Once you have generated brain masks for each of the scans you wish to segment, you can now apply the pre-trained TSN model on the scans, while indicating that the generated brain masks need to be used for defining regions-of-interest.  
+Once you have generated brain masks for each of the scans you wish to segment, you can now apply the pre-trained segmentation model on the scans, while indicating that the generated brain masks need to be used for defining ROIs.  
 
 Similar to the previous step, you will need:
-- The TSN model configuration file (tsn_model_config.cfg).
-- The TSN network check-point files (tsn.model.ckpt.index and tsn.model.ckpt.data).
-- The test configuration file (tsn_test_config.cfg), 
+- The segmentation model configuration file (cgm_model_config.cfg).
+- The network check-point files (cgm.model.ckpt.index and cgm.model.ckpt.data).
+- The test configuration file (cgm_test_config.cfg), 
 - The list of 3D scans you need to segment (test_t2w.cfg). Again, you will need to edit this list.
-- The list of output file names (tsn_out_names.cfg). Again, each entry here should correspond to a line in the list of scans; you will need to edit this list. 
+- The list of output file names (cgm_out_names.cfg). Again, each entry here should correspond to a line in the list of scans; you will need to edit this list. 
 
 You'll also need 
 - The ROI mask configuration file (roi.cfg). This needs to list down the paths to the final segmentation
 output from the previous step, which can found in the 'predictions' directory. Each entry in this list should have a corresponding T2-weighted file in the test_t2w.cfg file.
 
-Running the TSN is also straightforward.
+Running the  is also straightforward.
 
 ```
-./deepMedicRun -model ./fetal-segmentation-system/tsn/architecture/tsn_model_config.cfg 
-               -test ./fetal-segmentation-system/tsn/test/tsn_test_config.cfg 
-               -load  ./fetal-segmentation-system/tsn/checkpoint/tsn.model.ckpt
+./deepMedicRun -model ./fetal-segmentation-system/cgm/architecture/cgm_model_config.cfg 
+               -test ./fetal-segmentation-system/cgm/test/cgm_test_config.cfg 
+               -load  ./fetal-segmentation-system/cgm/checkpoint/cgm.model.ckpt
                -dev cuda0
 ```
 
