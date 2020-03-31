@@ -12,7 +12,7 @@ segmentation of fetal brain MRI. Our system was developed, refined, and evaluate
 Currently, the system takes volumetric T2-weighted MRI (NIfTI files) as input, 
 and returns back segmentation maps for cortical grey matter tissue regions. The core of our system is a CNN model that was developed via a human-in-the-loop approach, where an expert fetal neuroimage annotator at St Thomas' Hospital helped refine the performance of a model originally trained on automatically generated labels. This allowed us to accelerate the deep learning process for the complex task of fetal neuroimage segmentation with minimal manual labels (fewer than 300 MRI slices). 
 
-Example segmentation of unseen scans:
+Example segmentation of scans previously unseen by the model:
 
 <img src="https://github.com/afetit/dhcp-fetal-segmentation/blob/master/documentation/demo3.gif" width="280"> | <img src="https://github.com/afetit/dhcp-fetal-segmentation/blob/master/documentation/demo.gif" width="280"> | <img src="https://github.com/afetit/dhcp-fetal-segmentation/blob/master/documentation/demo2.gif" width="280">
 
