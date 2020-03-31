@@ -1,4 +1,4 @@
-# The DHCP fetal segmentation system
+# A deep learning system for fetal neuroimage segmentation
 
 <img src="https://github.com/afetit/dhcp-fetal-segmentation-tool/blob/master/documentation/for-github-2.png" width="900">
 
