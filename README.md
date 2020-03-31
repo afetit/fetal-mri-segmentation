@@ -6,7 +6,7 @@
 ### **Introduction**
 
 Here, we contribute an automated system based on deep neural networks for fast and sensitive tissue 
-segmentation of fetal brain MRI. Our system was developed, refined, and evaluated on 249 fetal scans acquired at gestational ages 21 – 38 weeks. Data used to develop the system was obtained from the **Developing Human Connectome Project (DHCP)** (http://www.developingconnectome.org/), which aims to make major scientific progress by creating the first 4-dimensional connectome of the developing brain.
+segmentation of fetal brain MRI. Our system was developed, refined, and evaluated on 249 fetal scans acquired at gestational ages of 21 – 38 weeks. Data used to develop the system was obtained from the **Developing Human Connectome Project (DHCP)** (http://www.developingconnectome.org/), which aims to make major scientific progress by creating the first 4-dimensional connectome of the developing brain.
 
 
 Currently, the system takes volumetric T2-weighted MRI (NIfTI files) as input, 
