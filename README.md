@@ -14,7 +14,7 @@ and returns back segmentation maps for cortical grey matter tissue regions. The 
 
 Example segmentation of DHCP scans previously unseen by the model:
 
-<img src="https://github.com/afetit/dhcp-fetal-segmentation/blob/master/documentation/demo3.gif" width="280"> | <img src="https://github.com/afetit/dhcp-fetal-segmentation/blob/master/documentation/demo.gif" width="280"> | <img src="https://github.com/afetit/dhcp-fetal-segmentation/blob/master/documentation/demo2.gif" width="280">
+<img src="https://github.com/afetit/dhcp-fetal-segmentation/blob/master/documentation/demo3.gif" width="280"> | <img src="https://github.com/afetit/dhcp-fetal-segmentation/blob/master/documentation/demo.gif" width="280"> | <img src="https://github.com/afetit/dhcp-fetal-segmentation/blob/master/documentation/demo2.gif" width="282">
 
 ---
 ### Running the system manually
