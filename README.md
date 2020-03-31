@@ -78,5 +78,5 @@ Running the  is also straightforward.
 ```
 
 ---
-### Coming soon! Running the framework from Docker
+### Coming soon! Running the system with Docker
 
