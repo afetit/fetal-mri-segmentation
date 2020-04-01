@@ -16,6 +16,18 @@ Currently, the system takes 3D T2-weighted MRI (NIfTI files) as input, and retur
 <img src="https://github.com/afetit/dhcp-fetal-segmentation/blob/master/documentation/demo3.gif" width="280"> | <img src="https://github.com/afetit/dhcp-fetal-segmentation/blob/master/documentation/demo.gif" width="280"> | <img src="https://github.com/afetit/dhcp-fetal-segmentation/blob/master/documentation/demo2.gif" width="282">
 
 ---
+### Requirements
+DeepMedic v0.70
+
+Tensorflow
+
+CUDA
+
+Python 3
+
+NiBabel, Numpy, Scipy
+
+---
 ### Running the system manually
 
 
