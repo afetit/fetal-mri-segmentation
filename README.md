@@ -17,15 +17,18 @@ Currently, the system takes 3D T2-weighted MRI (NIfTI files) as input, and retur
 
 ---
 ### Requirements
-DeepMedic v0.70
 
-Tensorflow
+You will need:
 
-CUDA
+* DeepMedic v0.70
 
-Python 3
+* Tensorflow
 
-NiBabel, Numpy, Scipy
+* A CUDA version compatible with your GPU
+
+* Python 3
+
+* NiBabel, Numpy, Scipy
 
 ---
 ### Running the system manually
