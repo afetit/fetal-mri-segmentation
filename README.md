@@ -6,7 +6,7 @@
 ### **Introduction**
 
 This repository provides an automated system based on deep neural networks for fast and sensitive tissue 
-segmentation of fetal neuroimages. Our system was developed, refined, and evaluated on 249 3D fetal scans acquired at gestational ages of 21 – 38 weeks. Data used to develop the system was obtained from the **Developing Human Connectome Project (DHCP)** (http://www.developingconnectome.org/), which aims to make major scientific progress by creating the first 4-dimensional connectome of the developing brain.
+segmentation of fetal neuroimages. Our system was developed, refined, and evaluated on 249 3D fetal scans acquired at gestational ages of 21 – 38 weeks using data from the **Developing Human Connectome Project (DHCP)** (http://www.developingconnectome.org/), which aims to make major scientific progress by creating the first 4-dimensional connectome of the developing brain.
 
 
 The core of our system is a CNN model that was developed via a human-in-the-loop approach, where an expert fetal neuroimage annotator at St Thomas' Hospital helped refine the performance of a model originally trained on automatically generated labels. This allowed us to accelerate the deep learning process for this complex tissue segmentation task with minimal manual labels (fewer than 300 MRI slices). 
