@@ -11,7 +11,7 @@ segmentation of fetal neuroimages. Our system was developed, refined, and evalua
 
 The core of our system is a CNN model that was developed via a human-in-the-loop approach, where an expert fetal neuroimage annotator at St Thomas' Hospital helped refine the performance of a model originally trained on automatically generated labels. This allowed us to accelerate the deep learning process for this complex tissue segmentation task with minimal manual labels (fewer than 300 MRI slices). 
 
-Currently, the system takes 3D T2-weighted MRI (NIfTI files) as input, and returns back corresponding segmentation maps for cortical grey matter tissue regions. Example segmentation of DHCP scans previously unseen by the model are shown below.
+Currently, the system takes 3D T2-weighted MRI (NIfTI files) as input, and returns back corresponding segmentation maps for cortical grey matter tissue regions. Example segmentation of DHCP scans previously unseen by the model are shown below, they correspond to gestational ages of 26, 28, and 33 weeks respectively.
 
 <img src="https://github.com/afetit/dhcp-fetal-segmentation/blob/master/documentation/demo3.gif" width="280"> | <img src="https://github.com/afetit/dhcp-fetal-segmentation/blob/master/documentation/demo.gif" width="280"> | <img src="https://github.com/afetit/dhcp-fetal-segmentation/blob/master/documentation/demo2.gif" width="282">
 
