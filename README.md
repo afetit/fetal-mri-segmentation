@@ -1,4 +1,4 @@
-# Fetal neuroimage segmentation with deep learning
+# 3D fetal neuroimage segmentation with deep learning
 
 <img src="https://github.com/afetit/dhcp-fetal-segmentation-tool/blob/master/documentation/for-github-2.png" width="900">
 
