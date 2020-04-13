@@ -97,4 +97,4 @@ Running the  is also straightforward.
 ---
 ### Citation
 
-**AE Fetit**, A Alansary, L Cordero-Grande, J Cupitt, AB Davidson, AD Edwards, JV Hajnal, E Hughes, K Kamnitsas, V Kyriakopoulou, A Makropoulos, PA Patkee, AN Price, MA Rutherford, D Rueckert,["A deep learning approach to segmentation of the developing cortex in fetal brain MRI with minimal manual labeling"](https://openreview.net/forum?id=VtVIlHSc0), *Interntaional Conference on Medical Imaging with Deep Learning (MIDL)*, 2020.
+**AE Fetit**, A Alansary, L Cordero-Grande, J Cupitt, AB Davidson, AD Edwards, JV Hajnal, E Hughes, K Kamnitsas, V Kyriakopoulou, A Makropoulos, PA Patkee, AN Price, MA Rutherford, D Rueckert, ["A deep learning approach to segmentation of the developing cortex in fetal brain MRI with minimal manual labeling"](https://openreview.net/forum?id=VtVIlHSc0), *Interntaional Conference on Medical Imaging with Deep Learning (MIDL)*, 2020.
