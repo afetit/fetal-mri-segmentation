@@ -42,7 +42,7 @@ the project's GitHub (https://github.com/deepmedic/deepmedic), note that the net
 
 **(b) Download the segmentation files:**
 
-In essence, our system is a collection of network checkpoints and configuration files that were developed and refined on DHCP fetal scans using DeepMedic. Once you have familiarised yourself with DeepMedic, how to use its command-line syntax, and how its configuration files work, download the directory named *fetal-segmentation-system*; this contains all necessary files to run our system, in addition to example DHCP data to demonstrate the neural networks' utility. Place *fetal-segmentation-system* under the *DeepMedic* directory.
+In essence, our system is a collection of network checkpoints and configuration files that were developed and refined on DHCP fetal scans using DeepMedic. Once you have familiarised yourself with DeepMedic, how to use its command-line syntax, and how its configuration files work, download the directory named *fetal-segmentation-system*; this contains all necessary files to run our system. Place *fetal-segmentation-system* under the *DeepMedic* directory.
 
 **(c) Preprocessing 1 - normalise the scans' intensities:** 
 
