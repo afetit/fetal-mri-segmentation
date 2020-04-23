@@ -46,7 +46,7 @@ In essence, our system is a collection of network checkpoints and configuration 
 
 **(c) Preprocessing 1 - normalise the scans' intensities:** 
 
-Our model was developed after normalising the intensities of the fetal scans to a zero-mean and unit variance space. Carrying out this step is important for the subsequent steps to work as expected.
+Our model was developed after normalising the intensities of the fetal scans to a zero-mean and unit variance space (see normalise_t2w_images.py). Carrying out this step is important for the subsequent steps to work as expected. 
 
 **(d) Preprocessing 2 - run the brain detection network (BDN):** 
 
