@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 import nibabel as nib
 import numpy as np
 
-loading_path = ‘/path/to/dhcp_neonatal_scans_directory’
-saving_path = ‘/path/to/output_directory_for_normalised_scans’
+loading_path = '/path/to/dhcp_neonatal_scans_directory'
+saving_path = '/path/to/output_directory_for_normalised_scans'
 onlyfiles = [f for f in listdir(loading_path) if isfile(join(loading_path,f))]
 for x in onlyfiles:
     full_filename = os.path.join(loading_path, x)
